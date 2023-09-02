@@ -1,0 +1,47 @@
+// begin(), end(), rbegin(), rend(), cbegin(), cend(), crbegin(), crend()
+#include<iostream>
+#include<string>
+using namespace std;
+
+int main(){
+
+string str;
+
+getline(cin, str);
+cout<<str<<endl;
+
+std::string::iterator it;
+std::string::reverse_iterator it1;
+
+cout<<endl;
+//forward itration
+for(it=str.begin(); it!=str.end();++it){
+    if(it == str.begin()) *it+=1;
+    cout<<*it<<" ";
+}
+cout<<endl;
+
+//reverse iteration
+for(it1=str.rbegin(); it1!=str.rend();++it1){
+    if(it == str.begin()) *it='G';
+    cout<<*it1<<" ";
+}
+cout<<endl;
+
+//constant forward
+for(auto it2=str.cbegin(); it2!=str.cend();++it2){
+    if(it == str.begin()) *it+=1;
+    cout<<*it2<<" ";
+}
+cout<<"\n";
+
+//constant reverse
+for(auto it3=str.crbegin(); it3!=str.crend();++it3){
+    if(it == str.begin()) *it='G';
+    cout<<*it3<<" ";
+}
+
+return 0;}
+
+//difference in between begin() and cbegin() is that cbegin() is that 
+//cbegin doesn't allow the initially set elements.
