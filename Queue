@@ -1,1 +1,37 @@
 
+#include<iostream>
+#include<string>
+using namespace std;
+
+int main(){
+
+int m,n;
+string str;
+cin>>m>>n>>str;
+
+std::string::iterator it;
+
+for(int i=0;i<n;i++){
+    for(it=str.begin(); it!=str.end();++it){
+        if(*it=='B' && *(it+1)=='G'){
+        *it='G'; 
+        *(it+1)='B';
+     
+       *it++;} 
+       else  if(*it=='G' && *(it+1)=='B'){
+        *it='G';
+        } 
+
+        else if(*it=='G' && *(it+1)=='G'){
+        *it='G'; 
+        *(it+1)='G';
+        *it++;
+        } 
+
+        else
+        *it=*it;
+    }
+}
+cout<<str<<endl;
+return 0;
+}
