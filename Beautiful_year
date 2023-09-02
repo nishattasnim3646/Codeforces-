@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int y, a, b, c, d,z;
+    cin >> z;
+    z++;
+while(1){
+
+    y=z;
+    a = y % 10;
+    y /= 10;
+    b = y % 10;
+    y /= 10;
+    c = y % 10;
+    d = y / 10;
+    if (a == b || a == c || a == d || b == c || b == d || c == d)
+        z++;
+    else{
+        cout << z<<endl;
+        break; }}
+    return 0;
+}
