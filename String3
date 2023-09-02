@@ -1,0 +1,25 @@
+// copy() and swap()
+#include<iostream>
+#include<string>
+using namespace std;
+
+int main(){
+
+    string str1 = "geeksforgeeks is for geeks";
+    string str2 = "geeksforgeeks rocks";
+  
+  //copy
+    char ch[20];
+    str1.copy(ch, 13, 0);
+    cout << ch << endl;
+  
+    // swap()
+    cout<<"Before swapping: \n";
+    cout << str1 << endl;
+    cout << str2 << endl;
+    str2.swap(str1);
+    cout<<"After swapping: \n";
+    cout << str1 << endl;
+    cout << str2 << endl;
+    return 0;
+}
