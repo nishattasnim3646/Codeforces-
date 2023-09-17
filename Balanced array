@@ -1,0 +1,46 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+int t;
+cin >> t;
+long long m[t];
+for (int i = 0; i < t; ++i)
+{
+cin >> m[i];
+}
+for (int i = 0; i < t; ++i)
+{
+
+int p = m[i];
+for (int j = 0; j < m[i] / 2 - 1; ++j)
+{
+p++;
+}
+if (p % 2 != 0)
+{
+cout << "YES" << endl;for (int j = 0; j < m[i] / 2 - 1; ++j)
+{
+p++;
+}
+if (p % 2 != 0)
+{
+cout << "YES" << endl;
+for (int j = 0; j < m[i] / 2; ++j)
+{
+cout << m[j] << " ";
+}
+for (int j = 0; j < m[i] / 2 - 1; ++j)
+{
+cout << m[j] - 1 << " ";
+}
+cout << p << endl;
+}
+else
+cout << "NO" << endl;
+p = 0;
+}
+
+return 0;
+}
