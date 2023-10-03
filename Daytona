@@ -1,0 +1,29 @@
+#include<iostream>
+using namespace std;
+
+int main(){
+
+
+    int a,n[100], b,t;
+    cin>>t;
+    while(t--){
+        cin>>a>>b;
+        for(int i=0;i<a;i++){
+            cin>>n[i];
+            
+        }
+        int c=0;
+        for(int i=0;i<a;i++){
+            if(n[i]==b) {
+                c++;
+                break;
+            }
+        }
+        if(c>0)
+            cout<<"YES"<<endl;
+        else
+            cout<<"NO"<<endl;
+    }
+    return 0;
+
+}
