@@ -1,0 +1,62 @@
+#include<iostream>
+using namespace std;
+
+bool isPrime(int n)
+{
+
+    // Corner case
+
+    if (n <= 1)
+
+        return false;
+
+
+    // Check from 2 to n-1
+
+    for (int i = 2; i <= n / 2; i++)
+
+        if (n % i == 0)
+
+            return false;
+
+
+    return true;
+}
+
+
+int main(){
+        int t;
+        cin>>t;
+while(t--){
+        int p,i=1,n;
+        cin>>n;
+if(isPrime(n)==0){
+        int m=n+1;
+        while(1){
+                if(isPrime(m)==1){
+                        if(isPrime(m-n+1)) m++;
+                        else {
+                        p=m-n+i;
+                        break;}
+                }
+                else m++;
+        }
+for(int i=0;i<n;i++){
+for(int j=0;j<n;j++){
+        if(i==j) cout<<p<<" ";
+        else cout<<"1 ";
+}
+cout<<endl;
+}
+}
+else{
+        for(int i=0;i<n;i++){
+                for(int j=0;j<n;j++){
+                        cout<<"1 ";
+                }
+                cout<<endl;
+        }
+}
+}
+cout<<endl;
+}
